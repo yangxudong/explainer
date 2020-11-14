@@ -6,7 +6,8 @@ split -d -l $avg_line $input_file part
 
 for file in $(ls part*)
 do {
-  echo $file
-}
+  ./keyword_mine.py --input $file --output ${file}_output
+} &
 done
+wait
 

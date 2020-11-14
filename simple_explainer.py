@@ -54,7 +54,8 @@ class SimpleExplainer(object):
             result.append((snippet, score))
         return result
 
-    def get_word_ids(self, num_words, start):
+    @staticmethod
+    def get_word_ids(num_words, start):
         ngram = 1
         upper = num_words
         offset = 0
